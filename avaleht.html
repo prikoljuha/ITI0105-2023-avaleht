@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avaleht</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="avaleht.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg cvet1">
+    <div class="container-fluid">
+        <img class="navbar-brand mx-auto" src="https://sun9-64.userapi.com/impg/f1rDv_9zQRyXSHuAmyAzexGZk0pOe8bJHlWRcQ/ouWhPUy6dQ0.jpg?size=716x126&quality=96&sign=f950c8824b2d88b8584d9ccca1cf9b47&type=album" height="70px">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item nav-tekst">
+                    <a class="nav-link" aria-current="page" href="#">Kassi kostüümid</a>
+                </li>
+                <li class="nav-item nav-tekst">
+                    <a class="nav-link" aria-current="page" href="#">Koera kostüümid</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <button class="btn knopka" type="button" style="background-color: #BD52E3">
+                    <i class="bi bi-house"></i>
+                </button>
+                <button class="btn knopka" type="button" style="background-color: #BD52E3">
+                    <i class="bi bi-person"></i>
+                </button>
+                <button class="btn knopka" type="button" style="background-color: #BD52E3">
+                    <i class="bi bi-handbag"></i>
+                </button>
+                <button class="btn knopka" type="button" id="searchButton" style="background-color: #BD52E3">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+            <div class="dropdown-menu dropdown-menu-end" id="menuContent" aria-labelledby="searchButton">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Leia sobiv toode" aria-label="Search">
+                    <button class="btn knopka" type="submit" style="background-color: #E6BBF6">
+                        Otsi
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+<script>
+const searchButton = document.getElementById("searchButton");
+const menuContent = document.getElementById("menuContent");
+const searchInput = document.querySelector('form[role="search"] input');
+const searchButtonInMenu = document.querySelector('form[role="search"] button');
+
+searchButton.addEventListener("click", function (e) {
+    e.stopPropagation();
+    menuContent.style.display = menuContent.style.display === "none" ? "block" : "none";
+});
+
+searchInput.addEventListener("click", function (e) {
+    e.stopPropagation();
+});
+
+searchButtonInMenu.addEventListener("click", function (e) {
+    e.stopPropagation();
+});
+
+document.addEventListener("click", function () {
+    menuContent.style.display = "none";
+});
+</script>
+
+</body>
+<div class="arrivals">
+  <h6>New arrivals</h6>
+</div>
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-indicators ">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="https://sun9-20.userapi.com/impg/9d-1VNeK-Md9KyLj69vMbYC3LR2MsvHIU3nf9w/884HyviJQHU.jpg?size=1169x796&quality=96&sign=2fc81c3cb2793d93470be33c7f17393d&type=album" class="d-block w-100 mx-auto" alt="...">
+      <div class="carousel-caption d-none d-md-block text-end">
+        <h5>Marilyn Monroe</h5>
+        <h5>Kostüüm</h5>
+        <p>85€</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://sun9-72.userapi.com/impg/a8SxOjQHkjp-r7569SNGildVdnl3WfL1BhIh7w/kkJSYcVW8SI.jpg?size=1169x796&quality=96&sign=7a5384ef28dcf85046e72f15be7a8fc9&type=album" class="d-block w-100 mx-auto" alt="...">
+      <div class="carousel-caption d-none d-md-block  text-end">
+        <h5>Robin Kostüüm</h5>
+        <p>70€</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://sun9-57.userapi.com/impg/-iaz4VQNNq2Xmk9CA987_KciEzeKRWPwWKEQXA/h79lvlO-XMg.jpg?size=1169x796&quality=96&sign=2644e145d9ada0ad48223201f1fc6e99&type=album" class="d-block w-100 mx-auto" alt="...">
+      <div class="carousel-caption d-none d-md-block  text-end">
+        <h5>Elf Kostüüm</h5>
+        <p>50€</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="d-flex flex-wrap">
+  <div class="col-md-6 col-s-6 col-xs-12">
+    <img class="pets" src="https://t3.ftcdn.net/jpg/02/24/67/58/360_F_224675884_Axs5ArrTXrqXEOPnhqTS8PEbuEwP15v2.jpg" class="img-fluid" alt="photo">
+  </div>
+  <div class="col-md-5 col-s-6 col-xs-12 mt-3 mb-1 rounded-rectangle">
+    <p>Halloween on 10 päeva<br> pärast!<br> <br> Kiirusta oma<br> lemmikloomale kostüümi<br> osta!</p>
+  </div>
+</div>
+    <p class="text-left mt-3">
+        <a href="url" class="custom-link">Vaata Halloweeni kostüüme</a>
+    </p>
+
+
+</html>
